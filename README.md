@@ -1,4 +1,4 @@
-# TITLE
+# Prime Benchmark
 
 A lightweight C++ and Python tool for measuring the runtime performance of two prime counting and generation algorithms with graphical visualization. 
 
