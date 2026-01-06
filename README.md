@@ -1,4 +1,4 @@
-# Prime Benchmark
+# Prime Algorithm Analysis
 
 A lightweight C++ and Python tool for measuring the runtime performance of two prime counting and generation algorithms with graphical visualization. 
 
@@ -14,7 +14,7 @@ A lightweight C++ and Python tool for measuring the runtime performance of two p
 
 ## Motivation
 
-I wanted a short yet practical project to develop my skills in C++, Python, and Make. As a math enthusiast, I thought that a prime benchmarking tool would be perfect. Building this prime benchmarking tool, I learned about
+I wanted a short yet practical project to develop my skills in C++, Python, and Make. As a math enthusiast, I thought that a prime algorithm analysis tool would be perfect. Working on this project, I learned about
 
 - The std::chrono C++ library
 - Pipelining with C++ and Python
@@ -31,7 +31,7 @@ I chose to test the Trial Division and Sieve of Eratosthenes algorithms to contr
 - Trial division algorithm to compute the $n$-th prime.
 - Sieve of Eratosthenes algorithm to compute the number of primes up to $n$.
 - Benchmarking algorithm to record the runtime of the above algorithms for various values of $n$ and record results in CSV files.
-- Python script to generate plots to visualize the results of the benchmarking algorithm.
+- Python script to generate plots to visualize the results of the analysising algorithm.
 
 ## Example
 
@@ -50,17 +50,17 @@ The following results were obtained when run on an AMD Ryzen 7 8840HS (3301 Mhz,
 
 ### Clone the repository
 ```bash
-git clone git@github.com:abbasikareem/prime-benchmark.git
-cd prime-benchmark
+git clone git@github.com:abbasikareem/prime-analysis.git
+cd prime-analysis
 ```
 
 ## Usage
 
-Once installed, navigate to the ``prime-benchmark`` directory and enter
+Once installed, navigate to the ``prime-analysis`` directory and enter
 ```bash
 make
 ```
-into the terminal. The program may take a few minutes to run. When the program has finished, the benchmark CSV files can be found in the ``prime-benchmark/csvs`` directory, and the runtime plots can be found in the ``prime-benchmark/plots`` directory.
+into the terminal. The program may take a few minutes to run. When the program has finished, the analysis CSV files can be found in the ``prime-analysis/csvs`` directory, and the runtime plots can be found in the ``prime-analysis/plots`` directory.
 
 ## How It Works
 
@@ -78,7 +78,7 @@ This algorithm is far more efficient than the Trial Division algorithm, with a r
 
 ### Benchmarker
 
-The C++ benchmarker calls the Trial Division and Sieve of Eratosthenes algorithms with various values of $n$, recording their runtimes using the std::chrono::steady_clock, and enters the results into two CSV files, ``csvs/trial-division.csv`` and ``csvs/sieve.csv``.
+The C++ analysiser calls the Trial Division and Sieve of Eratosthenes algorithms with various values of $n$, recording their runtimes using the std::chrono::steady_clock, and enters the results into two CSV files, ``csvs/trial-division.csv`` and ``csvs/sieve.csv``.
 
 *Note*: The Trial Division algorithm computes the $n$-th prime, while the Sieve of Eratosthenes algorithm computes the number of primes up to $n$.
 
@@ -88,7 +88,7 @@ Once the CSV files have been generated, the Python script ``plot-results.py`` us
 
 ## Project Structure
 ```text
-prime-benchmark
+prime-analysis
 ├── LICENSE
 ├── Makefile
 ├── README.md
@@ -96,7 +96,7 @@ prime-benchmark
 │   ├── sample-sieve-runtime.png
 │   └── sample-trial-division-runtime.png
 ├── bin
-│   └── benchmark
+│   └── analysis
 ├── csvs
 │   ├── sieve.csv
 │   └── trial-division.csv
@@ -105,7 +105,7 @@ prime-benchmark
 │   ├── sieve-runtime.png
 │   └── trial-division-runtime.png
 └── src
-    └── benchmark.cpp
+    └── analysis.cpp
 ```
 
 ## Limitations and Future Improvements
@@ -113,11 +113,11 @@ Limitations
 - The Sieve of Eratosthenes implementation is not optimized for extremely large values of $n$
 - The two algorithms solve slightly different problems ($n$-th prime vs number of primes up to $n$)
 - Only two algorithms are implemented, limiting the scope of the analysis.
-- Input ranges are fixed in the benchmarker rather than configurable by the user.
+- Input ranges are fixed in the analysiser rather than configurable by the user.
 
 Future Improvements
 - Implement more prime algorithms, such as segmented sieve and wheel factoring.
-- Unify benchmark definitions so that all algorithms solve the same task for analysis consistency.
+- Unify analysis definitions so that all algorithms solve the same task for analysis consistency.
 - Add statistical analysis for added insights.
 - Measure memory usage in addition to runtime.
 - Allow configurable input ranges through a command-line interface.

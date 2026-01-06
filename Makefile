@@ -6,8 +6,8 @@ BIN_DIR := bin
 PLOT_DIR := plots
 CSV_DIR := csvs
 
-SRCS := $(SRC_DIR)/benchmark.cpp
-BENCH := $(BIN_DIR)/benchmark
+SRCS := $(SRC_DIR)/analysis.cpp
+BENCH := $(BIN_DIR)/analysis
 CSVS := $(CSV_DIR)/sieve.csv $(CSV_DIR)/trial-division.csv
 PNGS := $(PLOT_DIR)/sieve-runtime.png $(PLOT_DIR)/trial-division-runtime.png
 
